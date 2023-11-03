@@ -6,7 +6,7 @@
     <link rel="stylesheet" type="text/css" href="./addingTwoNumbers.css">
 </head>
 
-<body onload="add();">
+<body >
     <div class="registration-form">
         <h2>Adding Two Numbers</h2>
         <form action="#" method="post"> <!--  ? -->
@@ -18,17 +18,22 @@
             <div><input type="number" name="total" placeholder="Result" id="total"></div>
             <br /><br />
             <!-- <button>Submit</button> -->
-        </form>
+        </form>`
 
 
     </div>
 
     <script>
+           let one = document.getElementById("one")
+           let two = document.getElementById("two")
+
         function add() {
-            var one = document.getElementById("one").value;
-            var two = document.getElementById("two").value;
-            var total = parseFloat(one) + parseFloat(two);
-            document.getElementById("total").value = total;
+            
+            let result = document.getElementById("total")
+            
+            let total = parseInt(one.value) + parseInt(two.value);
+            result.value = parseInt(total);
+            
         }
 
 
