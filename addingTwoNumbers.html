@@ -1,9 +1,39 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Adding Two Numbers</title>
-    </head>
-    <body>
 
-    </body>
+<head>
+    <title>Adding Two Numbers</title>
+    <link rel="stylesheet" type="text/css" href="./addingTwoNumbers.css">
+</head>
+
+<body onload="add();">
+    <div class="registration-form">
+        <h2>Adding Two Numbers</h2>
+        <form action="#" method="post"> <!--  ? -->
+            <p> First Number</p>
+            <div><input type="number" name="one" placeholder="Enter the First Number" id="one" onchange="add();" ></div>
+            <p> Second Number</p>
+            <div><input type="number" name="two" placeholder="Enter the Second Number" id="two" onchange="add();"></div>
+            <p> Result</p>
+            <div><input type="number" name="total" placeholder="Result" id="total"></div>
+            <br /><br />
+            <!-- <button>Submit</button> -->
+        </form>
+
+
+    </div>
+
+    <script>
+        function add() {
+            var one = document.getElementById("one").value;
+            var two = document.getElementById("two").value;
+            var total = parseFloat(one) + parseFloat(two);
+            document.getElementById("total").value = total;
+        }
+
+
+    </script>
+
+</body>
+
 </html>
